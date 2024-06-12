@@ -5,7 +5,9 @@ function getUser() {
     .then(res => res.json())
     .then(users => {
         let x = 0;
+        console.log();
         users.data.map(item => {
+            
             userItem.innerHTML += `
                 <li>
                     <p class="counter"> ${++x}</p>
@@ -15,6 +17,7 @@ function getUser() {
                     
                         <button class="edit">Edit</button>
                         <button class="delete">Delete</button>
+
                     
                 </li>
             `;
